@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.mibalstudio.tictactoe.component.DataPrinter;
+import com.mibalstudio.tictactoe.component.Game;
 import com.mibalstudio.tictactoe.component.GameOverHandler;
 import com.mibalstudio.tictactoe.component.UserInputReader;
 import com.mibalstudio.tictactoe.model.game.Cell;
 import com.mibalstudio.tictactoe.model.game.GameTable;
 
-public class MainActivity extends AppCompatActivity implements DataPrinter, UserInputReader, GameOverHandler {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,33 +19,11 @@ public class MainActivity extends AppCompatActivity implements DataPrinter, User
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    public void printInstructions() {
-
+    private void start(final String[] args) {
+        // onCLick() create arguments and send it to gameFactory
+        final GameFactory gameFactory = new GameFactory(args);
+        Game game = gameFactory.create();
+        game.play();
     }
 
-    @Override
-    public void printInfoMessage(String message) {
-
-    }
-
-    @Override
-    public void printErrorMessage(String message) {
-
-    }
-
-    @Override
-    public void printGameTable(GameTable gameTable) {
-
-    }
-
-    @Override
-    public void gameOver() {
-
-    }
-
-    @Override
-    public Cell getUserInput() {
-        return null;
-    }
 }
