@@ -53,10 +53,10 @@ public class GameFactory {
         final DataPrinter dataPrinter;
         final UserInputReader userInputReader;
         final GameOverHandler gameOverHandler;
-        final MainActivity mainActivity = new MainActivity();
-        dataPrinter = mainActivity;
-        userInputReader = mainActivity;
-        gameOverHandler = mainActivity;
+        final GameActivity gameActivity = new GameActivity();
+        dataPrinter = gameActivity;
+        userInputReader = gameActivity;
+        gameOverHandler = gameActivity;
         final Player player1;
         if (player1Type == USER) {
             player1 = new Player(X, new UserMove(userInputReader, dataPrinter));
