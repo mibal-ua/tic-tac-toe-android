@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.mibalstudio.tictactoe.component.DataPrinter;
 import com.mibalstudio.tictactoe.component.GameOverHandler;
@@ -26,12 +27,16 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
 
     @Override
     public void printInfoMessage(String message) {
-
+        Toast toast = Toast.makeText(getApplicationContext(),
+                message, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     @Override
     public void printErrorMessage(String message) {
-
+        Toast toast = Toast.makeText(getApplicationContext(),
+                message, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     @Override
