@@ -19,23 +19,20 @@ package com.mibalstudio.tictactoe.component.config;
 
 import com.mibalstudio.tictactoe.model.config.Level;
 import com.mibalstudio.tictactoe.model.config.PlayerType;
-import com.mibalstudio.tictactoe.model.config.UserInterface;
 
 import static com.mibalstudio.tictactoe.model.config.Level.*;
 import static com.mibalstudio.tictactoe.model.config.PlayerType.COMPUTER;
 import static com.mibalstudio.tictactoe.model.config.PlayerType.USER;
-import static com.mibalstudio.tictactoe.model.config.UserInterface.CONSOLE;
-import static com.mibalstudio.tictactoe.model.config.UserInterface.GUI;
 
 /**
  * @author Michael Balakhon
  * @link http://t.me/mibal_ua
  */
-public class CommandLineArgumentParser {
+public class ArgumentParser {
 
     private final String[] args;
 
-    public CommandLineArgumentParser(final String[] args) {
+    public ArgumentParser(final String[] args) {
         this.args = args;
     }
 

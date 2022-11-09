@@ -18,14 +18,12 @@
 package com.mibalstudio.tictactoe;
 
 import com.mibalstudio.tictactoe.component.*;
-import com.mibalstudio.tictactoe.component.config.CommandLineArgumentParser;
+import com.mibalstudio.tictactoe.component.config.ArgumentParser;
 import com.mibalstudio.tictactoe.model.config.Level;
 import com.mibalstudio.tictactoe.model.config.PlayerType;
-import com.mibalstudio.tictactoe.model.config.UserInterface;
 import com.mibalstudio.tictactoe.model.game.Player;
 
 import static com.mibalstudio.tictactoe.model.config.PlayerType.USER;
-import static com.mibalstudio.tictactoe.model.config.UserInterface.GUI;
 import static com.mibalstudio.tictactoe.model.game.Sign.O;
 import static com.mibalstudio.tictactoe.model.game.Sign.X;
 
@@ -42,8 +40,8 @@ public class GameFactory {
     private final Level level;
 
     public GameFactory(final String[] args) {
-        final CommandLineArgumentParser.CommandLineArguments commandLineArguments =
-                new CommandLineArgumentParser(args).parse();
+        final ArgumentParser.CommandLineArguments commandLineArguments =
+                new ArgumentParser(args).parse();
         player1Type = commandLineArguments.getPlayer1Type();
         player2Type = commandLineArguments.getPlayer2Type();
         level = commandLineArguments.getLevel();
