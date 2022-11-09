@@ -15,8 +15,9 @@
  *
  */
 
-package com.mibalstudio.tictactoe;
+package com.mibalstudio.tictactoe.component;
 
+import com.mibalstudio.tictactoe.GameActivity;
 import com.mibalstudio.tictactoe.component.*;
 import com.mibalstudio.tictactoe.component.config.ArgumentParser;
 import com.mibalstudio.tictactoe.model.config.Level;

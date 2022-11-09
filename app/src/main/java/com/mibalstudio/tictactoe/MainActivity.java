@@ -4,12 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.mibalstudio.tictactoe.component.DataPrinter;
 import com.mibalstudio.tictactoe.component.Game;
-import com.mibalstudio.tictactoe.component.GameOverHandler;
-import com.mibalstudio.tictactoe.component.UserInputReader;
-import com.mibalstudio.tictactoe.model.game.Cell;
-import com.mibalstudio.tictactoe.model.game.GameTable;
+import com.mibalstudio.tictactoe.component.GameFactory;
 
 public class MainActivity extends AppCompatActivity {
 
