@@ -30,7 +30,7 @@ public class CellToNumberConverter implements CellNumberConverter {
     public Cell toCell(final char num) {
         if ('1' <= num && num <= '9') {
             final int val = num - '0' - 1;
-            return new Cell(2 - val / 3, val % 3);
+            return new Cell(val / 3, val % 3);
         } else {
             throw new IllegalArgumentException(
                     format("Number parameter must be between '1' and '9' . Current value is '%s'", num)
@@ -41,7 +41,7 @@ public class CellToNumberConverter implements CellNumberConverter {
     @Override
     public char toNumber(final Cell cell) {
         if (0 <= cell.getRow() && cell.getRow() <= 2 && 0 <= cell.getRow() && cell.getRow() <= 2) {
-            return (char) ('0' + ((2 - cell.getRow()) * 3 + cell.getCol() + 1));
+            return (char) ('0' + (cell.getRow() * 3 + cell.getCol() + 1));
         } else {
             throw new IllegalArgumentException(
                     format("Row and col indexes must be between 0 and 2. Current row is '%s', current col is '%s'", cell.getRow(), cell.getCol())
