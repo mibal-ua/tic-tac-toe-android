@@ -24,7 +24,7 @@ import com.mibalstudio.tictactoe.model.game.Sign;
  * @author Michael Balakhon
  * @link http://t.me/mibal_ua
  */
-public class UserMove implements Move{
+public class UserMove implements Move {
 
     private final UserInputReader userInputReader;
 

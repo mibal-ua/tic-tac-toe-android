@@ -43,7 +43,7 @@ public class Player {
         return move;
     }
 
-    public void makeMove(final GameTable gameTable){
+    public void makeMove(final GameTable gameTable) {
         move.make(gameTable, sign);
     }
 

@@ -16,9 +16,9 @@
 
 package com.mibalstudio.tictactoe.component;
 
-import com.mibalstudio.tictactoe.model.game.Cell;
-
 import static java.lang.String.format;
+
+import com.mibalstudio.tictactoe.model.game.Cell;
 
 /**
  * @author Michael Balakhon

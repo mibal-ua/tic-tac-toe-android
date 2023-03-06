@@ -18,7 +18,6 @@ package com.mibalstudio.tictactoe.component;
 
 import com.mibalstudio.tictactoe.model.game.Cell;
 import com.mibalstudio.tictactoe.model.game.GameTable;
-
 import com.mibalstudio.tictactoe.model.game.Player;
 import com.mibalstudio.tictactoe.model.game.Sign;
 

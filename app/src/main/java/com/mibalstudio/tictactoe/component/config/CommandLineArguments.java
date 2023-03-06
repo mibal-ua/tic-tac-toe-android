@@ -2,7 +2,6 @@ package com.mibalstudio.tictactoe.component.config;
 
 import com.mibalstudio.tictactoe.model.config.Level;
 import com.mibalstudio.tictactoe.model.config.PlayerType;
-import com.mibalstudio.tictactoe.model.config.UserInterface;
 
 import java.io.Serializable;
 

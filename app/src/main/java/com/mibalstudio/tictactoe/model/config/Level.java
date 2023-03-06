@@ -18,7 +18,11 @@
 package com.mibalstudio.tictactoe.model.config;
 
 import com.mibalstudio.tictactoe.component.ComputerMoveStrategy;
-import com.mibalstudio.tictactoe.component.strategy.*;
+import com.mibalstudio.tictactoe.component.strategy.FirstMoveToTheCenterComputerMoveStrategy;
+import com.mibalstudio.tictactoe.component.strategy.PreventUserWinComputerMoveStrategy;
+import com.mibalstudio.tictactoe.component.strategy.RandomComputerMoveStrategy;
+import com.mibalstudio.tictactoe.component.strategy.WinNowComputerMoveStrategy;
+import com.mibalstudio.tictactoe.component.strategy.WinOnTheNextStepComputerMoveStrategy;
 
 /**
  * @author Michael Balakhon

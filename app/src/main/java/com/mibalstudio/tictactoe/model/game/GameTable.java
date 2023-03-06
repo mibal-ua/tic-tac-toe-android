@@ -17,8 +17,9 @@
 
 package com.mibalstudio.tictactoe.model.game;
 
-import java.util.Arrays;
 import static com.mibalstudio.tictactoe.model.game.Sign.EMPTY;
+
+import java.util.Arrays;
 
 /**
  * @author Michael Balakhon
