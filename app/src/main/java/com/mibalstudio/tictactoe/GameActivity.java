@@ -126,4 +126,8 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
             GameActivity.this.notifyAll();
         }
     }
+
+    public void restartGame(final View v) {
+        startNewGame();
+    }
 }
