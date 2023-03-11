@@ -17,17 +17,25 @@
 
 package com.mibalstudio.tictactoe.model.game;
 
+import com.mibalstudio.tictactoe.R;
+
 /**
  * @author Michael Balakhon
  * @link http://t.me/mibal_ua
  */
 public enum Sign {
 
-    X,
+    X(R.drawable.cross),
 
-    O,
+    O(R.drawable.circle),
 
-    EMPTY;
+    EMPTY(R.drawable.empty);
+
+    private final int resourceId;
+
+    Sign(final int resourceId) {
+        this.resourceId = resourceId;
+    }
 
     public Sign oppositeSign() {
         if (this == X) {
@@ -39,6 +47,10 @@ public enum Sign {
         }
     }
 
+    public int getResourceId() {
+        return resourceId;
+    }
+
     @Override
     public String toString() {
         if (this == EMPTY) {
@@ -47,5 +59,4 @@ public enum Sign {
             return name();
         }
     }
-
 }
