@@ -44,7 +44,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
             <FrameLayout
@@ -58,7 +58,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
             <FrameLayout
@@ -71,7 +71,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
         </TableRow>
@@ -82,8 +82,7 @@
 
             <FrameLayout
                     android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:onClick="onClick">
+                    android:layout_height="120dp">
 
                 <ImageView
                         android:id="@+id/cell4"
@@ -91,7 +90,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
             <FrameLayout
@@ -104,7 +103,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
             <FrameLayout
@@ -117,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
         </TableRow>
@@ -136,7 +135,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
             <FrameLayout
@@ -149,7 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
             <FrameLayout
@@ -162,7 +161,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/border"
-                        android:onClick="onClick" />
+                        android:onClick="makeMove" />
             </FrameLayout>
 
         </TableRow>

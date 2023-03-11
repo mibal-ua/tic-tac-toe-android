@@ -119,7 +119,7 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
         return new CellToNumberConverter().toCell(clickedIndex);
     }
 
-    public void onClick(final View v) {
+    public void makeMove(final View v) {
         synchronized (GameActivity.this) {
             final String fullName = getResources().getResourceName(v.getId());
             clickedIndex = fullName.charAt(fullName.length() - 1);
