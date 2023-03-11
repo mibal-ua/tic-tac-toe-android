@@ -50,11 +50,6 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
     }
 
     @Override
-    public void printInstructions() {
-
-    }
-
-    @Override
     public void printInfoMessage(String message) {
         Toast toast = Toast.makeText(getApplicationContext(),
                 message, Toast.LENGTH_SHORT);
