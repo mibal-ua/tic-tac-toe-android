@@ -30,6 +30,8 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
 
     private char clickedIndex;
 
+    private CommandLineArguments args;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +39,13 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
 
         final Intent intent = getIntent();
         final CommandLineArguments args = (CommandLineArguments) intent.getSerializableExtra(ARGUMENTS_KEY);
+        this.args = args;
         printInfoMessage(args.getLevel() + " " + args.getPlayer2Type()); // TODO delete
 
+        startNewGame();
+    }
+
+    private void startNewGame() {
         gameThread = new Thread(() -> {
             Looper.prepare();
             GameFactory gameFactory = new GameFactory(args, this);
