@@ -5,6 +5,8 @@ import static com.mibalstudio.tictactoe.MainActivity.ARGUMENTS_KEY;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +27,8 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
     public static final int COlS_N_ROWS = 3;
 
     private Thread gameThread;
+
+    private char clickedIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +105,23 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
 
     @Override
     public Cell getUserInput() {
-        return null;
+        synchronized (GameActivity.this) {
+            try {
+                wait();
+            } catch (final InterruptedException exception) {
+                exception.printStackTrace();
+                System.exit(2);
+            }
+        }
+        printInfoMessage("cell " + clickedIndex);
+        return new CellToNumberConverter().toCell(clickedIndex);
+    }
+
+    public void onClick(final View v) {
+        synchronized (GameActivity.this) {
+            final String fullName = getResources().getResourceName(v.getId());
+            clickedIndex = fullName.charAt(fullName.length() - 1);
+            GameActivity.this.notifyAll();
+        }
     }
 }
