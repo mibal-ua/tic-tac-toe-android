@@ -59,6 +59,7 @@ public class Game {
 
     public void play() {
         final GameTable gameTable = new GameTable();
+        dataPrinter.printGameTable(gameTable);
 
         if (canSecondPlayerMakeFirstMove && new Random().nextBoolean()) {
             player2.makeMove(gameTable);
