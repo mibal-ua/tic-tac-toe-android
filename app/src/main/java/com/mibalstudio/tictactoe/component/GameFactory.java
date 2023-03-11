@@ -37,16 +37,19 @@ public class GameFactory {
 
     private final Level level;
 
-    public GameFactory(final CommandLineArguments commandLineArguments) {
+    private final GameActivity gameActivity;
+
+    public GameFactory(final CommandLineArguments commandLineArguments,
+                       final GameActivity gameActivity) {
         player2Type = commandLineArguments.getPlayer2Type();
         level = commandLineArguments.getLevel();
+        this.gameActivity = gameActivity;
     }
 
     public Game create() {
         final DataPrinter dataPrinter;
         final UserInputReader userInputReader;
         final GameOverHandler gameOverHandler;
-        final GameActivity gameActivity = new GameActivity();
         dataPrinter = gameActivity;
         userInputReader = gameActivity;
         gameOverHandler = gameActivity;
