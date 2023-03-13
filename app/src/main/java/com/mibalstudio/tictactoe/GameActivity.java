@@ -40,7 +40,6 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
         final Intent intent = getIntent();
         final CommandLineArguments args = (CommandLineArguments) intent.getSerializableExtra(ARGUMENTS_KEY);
         this.args = args;
-        printInfoMessage(args.getLevel() + " " + args.getPlayer2Type()); // TODO delete
 
         startNewGame();
     }
@@ -115,7 +114,6 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
                 System.exit(2);
             }
         }
-        printInfoMessage("cell " + clickedIndex);
         return new CellToNumberConverter().toCell(clickedIndex);
     }
 
