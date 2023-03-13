@@ -45,10 +45,11 @@ public class MainActivity extends AppCompatActivity {
         final Switch aSwitch = findViewById(R.id.userSwitch);
         if (aSwitch.isChecked()) {
             player2Type = USER;
+            return new CommandLineArguments(player2Type, null);
         } else {
             player2Type = COMPUTER;
         }
-        final RadioGroup radios = findViewById(R.id.radioGroup);
+        final RadioGroup radios = findViewById(R.id.levelRadioGroup);
         final int radioId = radios.getCheckedRadioButtonId();
         Level level = null;
         if (radioId == level1Radio) {
