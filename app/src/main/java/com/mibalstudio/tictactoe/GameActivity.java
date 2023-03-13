@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mibalstudio.tictactoe.component.CellToNumberConverter;
@@ -27,8 +28,6 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
 
     public static final int COlS_N_ROWS = 3;
 
-    private Thread gameThread;
-
     private char clickedIndex;
 
     private CommandLineArguments args;
@@ -37,16 +36,17 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        ActionBar toolbar = requireNonNull(getSupportActionBar());
+        toolbar.setDisplayHomeAsUpEnabled(true);
+
         final Intent intent = getIntent();
-        final CommandLineArguments args = (CommandLineArguments) intent.getSerializableExtra(ARGUMENTS_KEY);
-        this.args = args;
+        this.args = (CommandLineArguments) intent.getSerializableExtra(ARGUMENTS_KEY);
 
         startNewGame();
     }
 
     private void startNewGame() {
-        gameThread = new Thread(() -> {
+        final Thread gameThread = new Thread(() -> {
             Looper.prepare();
             GameFactory gameFactory = new GameFactory(args, this);
             Game game = gameFactory.create();
