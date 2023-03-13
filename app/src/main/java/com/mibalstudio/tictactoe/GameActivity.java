@@ -1,6 +1,7 @@
 package com.mibalstudio.tictactoe;
 
 import static com.mibalstudio.tictactoe.MainActivity.ARGUMENTS_KEY;
+import static java.util.Objects.requireNonNull;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,7 +37,7 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         final Intent intent = getIntent();
         final CommandLineArguments args = (CommandLineArguments) intent.getSerializableExtra(ARGUMENTS_KEY);
         this.args = args;
