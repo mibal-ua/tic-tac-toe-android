@@ -123,7 +123,7 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
         synchronized (GameActivity.this) {
             final String fullName = getResources().getResourceName(v.getId());
             clickedIndex = fullName.charAt(fullName.length() - 1);
-            GameActivity.this.notifyAll();
+            GameActivity.this.notify();
         }
     }
 
