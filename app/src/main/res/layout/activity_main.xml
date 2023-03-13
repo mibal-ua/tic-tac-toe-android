@@ -28,7 +28,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/levelRadioGroup"
             android:layout_width="77dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
@@ -72,7 +72,8 @@
             android:layout_marginTop="188dp"
             android:text="vs user"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/radioGroup"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/levelRadioGroup"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="checkIfEnabled" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

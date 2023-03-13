@@ -62,4 +62,16 @@ public class MainActivity extends AppCompatActivity {
         }
         return new CommandLineArguments(player2Type, level);
     }
+
+    public void checkIfEnabled(final View view) {
+        final Switch switchh = (Switch) view;
+        final boolean state = !switchh.isChecked();
+
+        final RadioGroup radioGroup = findViewById(R.id.levelRadioGroup);
+        for (int i = 0; i < radioGroup.getChildCount(); i++) {
+            final View childAt = radioGroup.getChildAt(i);
+            childAt.setClickable(state);
+            childAt.setEnabled(state);
+        }
+    }
 }
