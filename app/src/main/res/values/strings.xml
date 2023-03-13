@@ -2,4 +2,5 @@
     <string name="app_name">Tic tac toe</string>
     <string name="main_activity_label">@string/app_name</string>
     <string name="game_activity_label"></string>
+    <string name="restart_item_title">Restart game</string>
 </resources>

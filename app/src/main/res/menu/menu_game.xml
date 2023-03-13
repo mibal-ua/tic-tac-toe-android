@@ -7,7 +7,7 @@
     <item
             android:id="@+id/action_restart"
             android:icon="@drawable/restart"
-            android:title="@string/app_name"
+            android:title="@string/restart_item_title"
             app:showAsAction="ifRoom" />
 
 </menu>
