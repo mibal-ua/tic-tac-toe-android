@@ -6,6 +6,8 @@ import static java.util.Objects.requireNonNull;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -128,5 +130,22 @@ public class GameActivity extends AppCompatActivity implements DataPrinter, User
 
     public void restartGame(final View v) {
         startNewGame();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_restart:
+                startNewGame();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_game, menu);
+        return true;
     }
 }
